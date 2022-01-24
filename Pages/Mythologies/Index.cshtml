@@ -1,0 +1,99 @@
+﻿@page
+@model NewStart.Pages.Mythologies.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Age of Mythology">
+    <script src="/js/main.js"></script>
+    <title>Age of Mythology</title>
+    <link rel="stylesheet" href="~/css/Main.css">
+</head>
+<body>
+    <main>
+        <nav id="NavigationBar">
+            <a class="MenuOption" asp-area="" asp-page="/Index">
+                Home
+            </a>
+            <a class="MenuOption" href="/Units">
+                Units
+            </a>
+            <a class="MenuOption" href="/Mythologies">
+                Mythologies
+            </a>
+            <a class="MenuOption" href="/Gods">
+                Gods
+            </a>
+            <a class="MenuOption" href="/Quiz">
+                Quiz
+            </a>
+            <a class="MenuOption" href="/Reviews">
+                Review
+            </a>
+
+        </nav>
+        <section id="IndexPage">
+
+            <h1>MYTHOLOGIES</h1>
+
+            <a class="EDD-hyperlink" asp-page="./Create"> Create New Mythology</a>
+
+            <form method="get">
+                <table id="SearchTable">
+                    <tbody>
+                        <tr>
+                            <th><label for="searchTerm">Search</label></th>
+                            <td><input type="search" name="SearchTerm" id="SearchTerm" value="@Model.SearchTerm" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="SortColumn">Sort by</label></th>
+                            <td>
+                                <select asp-for="SortColumn" name="SortColumn" id="SortColumn">
+                                    <option>Name</option>
+                                    <option>Country of orgin</option>
+                                    <option>Focus</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit">Search</button>
+            </form>
+
+            <table id="table">
+                <tr>
+                    <th class="Table-headers">Name</th>
+                    <th class="Table-headers">Orgin country</th>
+                    <th class="Table-headers">Date</th>
+                </tr>
+
+               @foreach (var mythology in Model.Mythologies)
+                {
+                    <tr>
+                        <td class="Table-entries">
+                            @mythology.Name
+                        </td>
+                        <td class="Table-entries">
+                            @mythology.OrginCountry
+                        </td>
+                        <td class="Table-entries">
+                            @mythology.Date
+                        </td>
+
+                        <td class="EDD">
+                            <a class="EDD-hyperlink" asp-page="./Edit" asp-route-id="@mythology.ID">Edit</a> |
+                        </td>
+                        <td class="EDD">
+                            <a class="EDD-hyperlink" asp-page="./Details" asp-route-id="@mythology.ID">Details</a> |
+                        </td>
+                        <td class="EDD">
+                            <a class="EDD-hyperlink" asp-page="./Delete" asp-route-id="@mythology.ID">Delete</a> |
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </section>
+    </main>
+</body>

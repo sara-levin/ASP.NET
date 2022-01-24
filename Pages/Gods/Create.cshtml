@@ -1,0 +1,72 @@
+﻿@page
+@model NewStart.Pages.Gods.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Age of Mythology">
+    <title>Age of Mythology</title>
+    <link rel="stylesheet" href="~/css/CRUDpages.css">
+</head>
+<body>
+    <main>
+        <nav id="NavigationBar">
+            <a class="MenuOption" asp-area="" asp-page="/Index">
+                Home
+            </a>
+            <a class="MenuOption" href="/Units">
+                Units
+            </a>
+            <a class="MenuOption" href="/Mythologies">
+                Mythologies
+            </a>
+            <a class="MenuOption" href="/Gods">
+                Gods
+            </a>
+            <a class="MenuOption" href="/Quiz">
+                Quiz
+            </a>
+            <a class="MenuOption" href="/Reviews">
+                Review
+            </a>
+        </nav>
+
+        <h1>
+            Create New God
+        </h1>
+
+        <form method="post">
+            <table>
+                <tbody>
+                    <tr id="TableFlex">
+                        <th><label asp-for="createdGod.Name">Name</label></th>
+                        <td><input asp-for="createdGod.Name" /></td>
+                        <td><span asp-validation-for="createdGod.Name"></span></td>
+                        <th><label asp-for="createdGod.Trivia">Trivia</label></th>
+                        <td><input asp-for="createdGod.Trivia" /></td>
+                        <td><span asp-validation-for="createdGod.Trivia"></span></td>
+                        <th><label asp-for="createdGod.Age">Age</label></th>
+                        <td><input asp-for="createdGod.Age" /></td>
+                        <td><span asp-validation-for="createdGod.Age"></span></td>
+                        <th><label asp-for="createdGod.Focus">Focus</label></th>
+                        <td><input asp-for="createdGod.Focus" /></td>
+                        <td><span asp-validation-for="createdGod.Focus"></span></td>
+                        <th><label asp-for="createdGod.Mythology.Name">Mythology</label></th>
+                        <td>
+                            <select asp-for="createdGod.Mythology.Name">
+                                @foreach (var mythology in Model.mythologyList)
+                                {
+                                    <option value=@mythology>@mythology</option>
+                                }
+                            </select>
+                        </td>
+                        <td><span asp-validation-for="createdGod.Mythology.Name"></span></td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Save God</button>
+        </form>
+    </main>
+</body>

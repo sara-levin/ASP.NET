@@ -1,0 +1,62 @@
+﻿@page
+@model NewStart.Pages.UnitUserReviews.EditModel
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Age of Mythology">
+    <title>Age of Mythology</title>
+    <link rel="stylesheet" href="~/css/CRUDpages.css">
+</head>
+<body>
+    <main>
+        <nav id="NavigationBar">
+            <a class="MenuOption" asp-area="" asp-page="/Index">
+                Home
+            </a>
+            <a class="MenuOption" href="/Units">
+                Units
+            </a>
+            <a class="MenuOption" href="/Mythologies">
+                Mythologies
+            </a>
+            <a class="MenuOption" href="/Gods">
+                Gods
+            </a>
+            <a class="MenuOption" href="/Quiz">
+                Quiz
+            </a>
+            <a class="MenuOption" href="/Reviews">
+                Review
+            </a>
+        </nav>
+        <h1>
+            Edit Unit Review
+        </h1>
+
+        <form method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><label asp-for="EditReviews.Review">Review:</label></th>
+                        <td><input asp-for="EditReviews.Review" /></td>
+                        <td><span asp-validation-for="EditReviews.Review"></span></td>
+                    </tr>
+                    <tr>
+                        <th><label asp-for="EditReviews.Unit.Name">Unit:</label></th>
+                        <td>
+                            <select asp-for="EditReviews.Unit.Name">
+                                @foreach (var unit in Model.UnitList)
+                                {
+                                    <option value=@unit>@unit</option>
+                                }
+                            </select>
+                        </td>
+                        <td><span asp-validation-for="EditReviews.Unit.Name"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Save Unit Review</button>
+        </form>
+    </main>
+</body>

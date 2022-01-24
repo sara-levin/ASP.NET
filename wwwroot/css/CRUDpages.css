@@ -1,0 +1,70 @@
+﻿body {
+    background-image: url(Papyrus2.jpg)
+}
+
+#NavigationBar {
+    background: linear-gradient( 0deg, rgba(2,0,36,1) 0%, rgba(1,92,113,1) 58%, rgba(3,209,251,1) 100%);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    text-align: center;
+    border: 5px solid #b8860b;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.MenuOption {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: gold;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Papyrus;
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #000000, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+
+h1 {
+    color: #015c71;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Felix Titling';
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #ffffff, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.EDD {
+    color: transparent;
+    text-decoration: none !important;
+    background-image: url("Papyrus2whitened.jpg");
+}
+
+.EDD-hyperlink {
+    color: black !important;
+}
+
+.Table-heading {
+    background-image: url("Papyrus2whitened.jpg") !important;
+}
+
+.Table-entries {
+    background-image: url("Papyrus2whitened.jpg") !important;
+}
+
+p{
+    text-align:center;
+    background-image: url(Papyrus2whitened.jpg);
+}
+
+#TableFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}

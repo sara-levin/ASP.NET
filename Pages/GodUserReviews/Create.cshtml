@@ -1,0 +1,62 @@
+﻿@page
+@model NewStart.Pages.GodUserReviews.CreateModel
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Age of Mythology">
+    <title>Age of Mythology</title>
+    <link rel="stylesheet" href="~/css/CRUDpages.css">
+</head>
+<body>
+    <main>
+        <nav id="NavigationBar">
+            <a class="MenuOption" asp-area="" asp-page="/Index">
+                Home
+            </a>
+            <a class="MenuOption" href="/Units">
+                Units
+            </a>
+            <a class="MenuOption" href="/Mythologies">
+                Mythologies
+            </a>
+            <a class="MenuOption" href="/Gods">
+                Gods
+            </a>
+            <a class="MenuOption" href="/Quiz">
+                Quiz
+            </a>
+            <a class="MenuOption" href="/Reviews">
+                Review
+            </a>
+        </nav>
+
+        <h1>
+            Create New Review
+        </h1>
+
+        <form method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><label asp-for="CreatedReview.Review">@Html.DisplayNameFor(x => x.CreatedReview.Review)</label></th>
+                        <td><input asp-for="CreatedReview.Review" /></td>
+                        <td><span asp-validation-for="CreatedReview.Review"></span></td>
+                        <th><label asp-for="CreatedReview.God.Name">Mythology</label></th>
+                        <td>
+                            <select asp-for="CreatedReview.God.Name">
+                                @foreach (var god in Model.GodList)
+                                {
+                                    <option value=@god>@god</option>
+                                }
+                            </select>
+                        </td>
+                        <td><span asp-validation-for="CreatedReview.God.Name"></span></td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Save God</button>
+        </form>
+    </main>
+</body>

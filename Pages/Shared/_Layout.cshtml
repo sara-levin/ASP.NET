@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NewStart</title>
+    <link rel="stylesheet" href="~/css/Log-InHeader.css" />
+</head>
+<body>
+    <header id="LogInHeader">
+        <partial name="_LoginPartial" />
+        <img src="\css\Logo2.png">
+    </header>
+    
+    <main>
+            @RenderBody()
+    </main>
+ 
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

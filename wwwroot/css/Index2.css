@@ -1,0 +1,109 @@
+﻿body {
+    background-image: url("Marble2.JPG");
+    background-size: cover;
+}
+
+header {
+    height: fit-content;
+    padding: 0;
+}
+
+main {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+}
+
+
+#NavigationBar {
+    background: linear-gradient( 0deg, rgba(2,0,36,1) 0%, rgba(1,92,113,1) 58%, rgba(3,209,251,1) 100%);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    text-align: center;
+    border: 5px solid #b8860b;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.MenuOption {
+    padding-top: 10px;
+    padding-bottom:10px;
+    color: gold;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Papyrus;
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #000000, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+
+#IndexPage {
+    background-image: url("Papyrus2.JPG");
+    border-radius: 25px;
+    border-style: double;
+}
+
+h1 {
+    color: #015c71;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Felix Titling';
+    margin-bottom: 0px;
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #ffffff, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+
+.ReviewOption {
+    color: black !important;
+    background-image: url("Papyrus2whitened.jpg");
+    padding: 10px;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#subheading {
+    text-align: center;
+    text-shadow: 2px 0px 2px #e8c2a8, -2px 0px 2px #e8c2a8, 0px -2px 2px #e8c2a8,0px 2px 2px #e8c2a8, 0 0 10px #ffffff, 1px 0px #e8c2a8, -1px 0px #e8c2a8, 0px 1px #e8c2a8, 0px -1px #e8c2a8;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+    text-shadow: 2px 0px 2px #e8c2a8, -2px 0px 2px #e8c2a8, 0px -2px 2px #e8c2a8,0px 2px 2px #e8c2a8, 0 0 10px #ffffff, 1px 0px #e8c2a8, -1px 0px #e8c2a8, 0px 1px #e8c2a8, 0px -1px #e8c2a8;
+}
+
+#PopulateDatabase {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    color: gold;
+    font-size: 20px;
+    font-family: Papyrus;
+    border: 5px solid #b8860b;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(1,92,113,1) 58%, rgba(3,209,251,1) 100%);
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #000000, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+form{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+@media all and (max-width: 550px) {
+    #NavigationBar {
+        flex-direction: column;
+        background: none;
+        border: none;
+    }
+
+    .MenuOption {
+        padding: 0px;
+        background: linear-gradient( 0deg, rgba(2,0,36,1) 0%, rgba(1,92,113,1) 58%, rgba(3,209,251,1) 100%);
+        width: 100%;
+    }
+}

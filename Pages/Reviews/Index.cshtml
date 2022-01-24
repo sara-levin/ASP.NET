@@ -1,0 +1,59 @@
+﻿@page
+@model NewStart.Pages.Reviews.IndexModel
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Age of Mythology">
+    <script src="/js/main.js"></script>
+    <title>Age of Mythology</title>
+    <link rel="stylesheet" href="~/css/Main.css"
+          >
+</head>
+<body>
+    <main>
+        <nav id="NavigationBar">
+            <a class="MenuOption" href="/Units">
+                Units
+            </a>
+            <a class="MenuOption" href="/Mythologies">
+                Mythologies
+            </a>
+            <a class="MenuOption" href="/Gods">
+                Gods
+            </a>
+            <a class="MenuOption" href="/Quiz">
+                Quiz
+            </a>
+            <a class="MenuOption" href="/Reviews">
+                Write Review
+            </a>
+        </nav>
+        <section id="IndexPage">
+            <h1>Reviews</h1>
+            <div id="MiniMenu">
+                <a class="ReviewOption" asp-area="" asp-page="/Index">Home Page</a>
+
+                <a class="ReviewOption" href="/MythologyUserReviews/Index">
+                Mythology Review
+                </a>
+
+                <a class="ReviewOption" href="/UnitUserReviews/Index">
+                Unit Review
+                </a>
+
+                <a class="ReviewOption" href="/GodUserReviews/Index">
+                God Review
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+
+
+
+
+
+
+

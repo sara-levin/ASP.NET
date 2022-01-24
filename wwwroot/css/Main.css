@@ -1,0 +1,185 @@
+﻿html{
+    height: 100%;
+}
+
+body {
+    background-image: url("Marble2.JPG");
+    background-size: cover;
+    height:100%;
+}
+
+header {
+    height: fit-content;
+    padding: 0;
+}
+
+main {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+    height:100%;
+    margin-bottom: 20px;
+}
+
+#NavigationBar {
+    background: linear-gradient( 0deg, rgba(2,0,36,1) 0%, rgba(1,92,113,1) 58%, rgba(3,209,251,1) 100%);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    text-align: center;
+    border: 5px solid #b8860b;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.MenuOption {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: gold;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Papyrus;
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #000000, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+
+#IndexPage {
+    background-image: url("Papyrus2.JPG");
+    border-radius: 25px;
+    border-style: double;
+    text-align: center;
+    min-height: 400px;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#SearchTable{
+    width: 300px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.EDD {
+    color: transparent;
+    text-decoration: none !important;
+    background-image: url("Papyrus2whitened.jpg");
+}
+
+.EDD-hyperlink{
+    color:black !important;
+}
+
+.Table-heading {
+    background-image: url("Papyrus2whitened.jpg") !important;
+}
+
+.Table-entries {
+    background-image: url("Papyrus2whitened.jpg") !important;
+}
+
+#table {
+    width: 100%;
+}
+
+h1 {
+    color: #015c71;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Felix Titling';
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #ffffff, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+
+h2 {
+    color: #015c71;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Felix Titling';
+    text-shadow: 2px 0px 2px #e8c2a8, -2px 0px 2px #e8c2a8, 0px -2px 2px #e8c2a8,0px 2px 2px #e8c2a8, 0 0 10px #ffffff, 1px 0px #e8c2a8, -1px 0px #e8c2a8, 0px 1px #e8c2a8, 0px -1px #e8c2a8;
+}
+
+h3 {
+    color: #015c71;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Felix Titling';
+    text-shadow: 2px 0px 2px #e8c2a8, -2px 0px 2px #e8c2a8, 0px -2px 2px #e8c2a8,0px 2px 2px #e8c2a8, 0 0 10px #ffffff, 1px 0px #e8c2a8, -1px 0px #e8c2a8, 0px 1px #e8c2a8, 0px -1px #e8c2a8;
+}
+
+#QuizResult {
+    color: #a54721;
+    margin-top: 0px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Felix Titling';
+    text-shadow: 2px 0px 2px #b8860b, -2px 0px 2px #b8860b, 0px -2px 2px #b8860b,0px 2px 2px #b8860b, 0 0 10px #ffffff, 1px 0px #DAA520, -1px 0px #DAA520, 0px 1px #DAA520, 0px -1px #DAA520;
+}
+
+.p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+    text-shadow: 2px 0px 2px #e8c2a8, -2px 0px 2px #e8c2a8, 0px -2px 2px #e8c2a8,0px 2px 2px #e8c2a8, 0 0 10px #ffffff, 1px 0px #e8c2a8, -1px 0px #e8c2a8, 0px 1px #e8c2a8, 0px -1px #e8c2a8;
+}
+
+.ReviewOption {
+    color: black !important;
+    background-image: url(Papyrus2whitened.jpg) !important;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#MiniMenu {
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media all and (max-width: 580px) {
+    #MiniMenu {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #NavigationBar {
+        flex-direction: column;
+        background: none;
+        border: none;
+    }
+
+    .MenuOption {
+        padding: 0px;
+        background: linear-gradient( 0deg, rgba(2,0,36,1) 0%, rgba(1,92,113,1) 58%, rgba(3,209,251,1) 100%);
+        width: 100%;
+    }
+
+    #table {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    body {
+        background-image: url(Papyrus2.jpg);
+    }
+
+    #IndexPage {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}

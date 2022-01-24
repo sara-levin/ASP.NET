@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Age of Mythology">
+        <script src="/js/main.js"></script>
+        <title>Age of Mythology</title>
+        <link rel="stylesheet" href="~/css/Index2.css">
+    </head>
+    <body>
+        <main>
+            <nav id="NavigationBar">
+                <a class="MenuOption" asp-area="" asp-page="/Index">
+                    Home
+                </a>
+                <a class="MenuOption" href="/Units">
+                    Units
+                </a>
+                <a class="MenuOption" href="/Mythologies">
+                    Mythologies
+                </a>
+                <a class="MenuOption" href="/Gods">
+                    Gods
+                </a>
+                <a class="MenuOption" href="/Quiz">
+                    Quiz
+                </a>
+                <a class="MenuOption" href="/Reviews">
+                    Reviews
+                </a>
+            </nav>
+            <section id="IndexPage">
+                <h1>Welcome</h1>
+                <p id="subheading">To this page centered around Age of Mythology</p>
+                <p class="p">Do you want us to provide you with a sample of the Mythologies, Units and Gods used in the real game? </p>
+                <p class="p">Then click the button below: </p>
+                <form method="post">
+                    <button id="PopulateDatabase" type="submit">Populate Database</button>
+                </form>
+            </section>
+        </main>
+    </body>

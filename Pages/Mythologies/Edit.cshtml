@@ -1,0 +1,58 @@
+﻿@page "{id:int}"
+@model NewStart.Pages.Mythologies.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Age of Mythology">
+    <title>Age of Mythology</title>
+    <link rel="stylesheet" href="~/css/CRUDpages.css">
+</head>
+<body>
+    <main>
+        <nav id="NavigationBar">
+            <a class="MenuOption" asp-area="" asp-page="/Index">
+                Home
+            </a>
+            <a class="MenuOption" href="/Units">
+                Units
+            </a>
+            <a class="MenuOption" href="/Mythologies">
+                Mythologies
+            </a>
+            <a class="MenuOption" href="/Gods">
+                Gods
+            </a>
+            <a class="MenuOption" href="/Quiz">
+                Quiz
+            </a>
+            <a class="MenuOption" href="/Reviews">
+                Review
+            </a>
+        </nav>
+
+        <h1>
+            Edit Mythology
+        </h1>
+
+        <form method="post">
+            <table>
+                <tbody>
+                    <tr id="TableFlex">
+                        <th><label asp-for="editableMythology.Name">Name</label></th>
+                        <td><input asp-for="editableMythology.Name" /></td>
+                        <td><span asp-validation-for="editableMythology.Name"></span></td>
+                        <th><label asp-for="editableMythology.OrginCountry">Orgin Country</label></th>
+                        <td><input asp-for="editableMythology.OrginCountry" /></td>
+                        <td><span asp-validation-for="editableMythology.OrginCountry"></span></td>
+                        <th><label asp-for="editableMythology.Date">Date</label></th>
+                        <td><input asp-for="editableMythology.Date" /></td>
+                        <td><span asp-validation-for="editableMythology.Date"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Save Mythology</button>
+        </form>
+    </main>
+</body>
